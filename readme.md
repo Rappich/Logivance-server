@@ -1,8 +1,10 @@
 
-# Chas Advance – Backend
+# Logivance – Backend
 
-This repository contains the **backend service** for **Chas Advance**, a logistics platform enabling climate-controlled and fully traceable delivery of specialized goods.  
-The backend handles data management, authentication, sensor communication, vehicle integration, and provides REST APIs for both the frontend and IoT systems.
+This repository contains the **backend service** for the school project **Logivance**, a logistics platform for climate-controlled and traceable delivery of specialized goods. The backend handles data management, authentication, sensor communication, vehicle integration, and provides REST APIs for both the frontend and IoT systems.
+
+> **Note:** The Azure backend, database, frontend, and monitoring have been decommissioned. The backend can now only be run **locally** using Docker and PostgreSQL.
+
 
 ---
 ## Repository Structure (Top-Level)
@@ -92,7 +94,7 @@ Detailed documentation is stored in the [`docs/`](docs/) folder:
 
 ## Contributors
 
-**Backend Team – Chas Advance**
+**Backend Team – Logivance**
 
 * [Fredrik Rappich](https://github.com/Rappich) – Backend Developer
 * [Anna Schwartz](https://github.com/AnnaSchwartzChas) – Backend Developer

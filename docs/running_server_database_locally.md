@@ -11,7 +11,7 @@ This guide explains how to run the backend on your local machine via Docker for 
 ## Prerequisites
 
 - Docker installed on your machine.
-- Files can be found at [The backend repo]([https://github.com/Chas-Advance-Grupp-4/backend](https://github.com/Rappich/Logivance-server)) branch running localy
+- Files can be found at [The backend repo](https://github.com/Rappich/Logivance-server) branch `running-localy`
 - docker-compose.yml file downloaded and placed in the same folder as the .env file
 - db_dump.sql downloaded and placed in the same folder as the .env file
 - `.env` file in project root with required environment variables:

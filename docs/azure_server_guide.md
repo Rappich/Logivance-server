@@ -1,5 +1,8 @@
 # Azure Backend Server Guide – Team 4
 
+> ⚠️ **Important:** The Azure backend, database, frontend, and monitoring have been decommissioned and are no longer live.  
+> This guide is kept for historical reference only and should **not** be used to deploy the current project.
+
 This document explains how our **FastAPI backend** is deployed and managed in **Azure App Service** using **Docker containers**.  
 It includes how to run, update, and troubleshoot the development server.
 

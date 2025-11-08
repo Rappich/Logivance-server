@@ -1,3 +1,5 @@
+Lets update this, so it tells you how to log in etc. 
+
 ### Running the Backend locally (Both server and Database)
 
 **Filenamn:** `docs/running_server_database_locally.md`
@@ -63,6 +65,26 @@ Expected response:
 ```json
 {"status": "ok", "message": "API is running"}
 ```
+
+Demo Credentials
+
+For demonstration purposes, the database comes with the following users:
+
+Role      | Username   | Password
+----------|------------|---------
+Admin     | admin      | admin
+Customer  | customer1  | customer1
+
+These credentials are demo-only. Do not use them in production.
+
+You can log in via the API endpoints or through the frontend (if connected to this backend) using these credentials.
+
+Notes
+
+- Multi-arch images work on AMD64 and ARM64.
+- Local container is not exposed to the internet via localhost.
+- Container is not in reload mode; restart after code changes.
+- Use health endpoint to ensure startup is correct.
 
 
 ### Notes

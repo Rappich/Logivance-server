@@ -30,7 +30,7 @@ This repository contains the **backend service** for the school project **Logiva
 
 - **Language:** Python 3.11+
 - **Framework:** FastAPI + Uvicorn
-- **Database:** PostgreSQL (Azure SQL in production)
+- **Database:** PostgreSQL (Azure SQL in production, local via docker compose)
 - **ORM & Migrations:** SQLAlchemy + Alembic
 - **Authentication:** JWT (PyJWT), Passlib + Bcrypt
 - **Rate Limiting:** SlowAPI
@@ -66,15 +66,30 @@ docker pull chasadvancegroup4/chas_advance_backend:2.0   3.0 ...
 
 ---
 
+## Running Locally
+
+To run the backend together with a local PostgreSQL instance, follow:
+
+[`docs/running_server_database_locally.md`](docs/running_server_database_locally.md)
+
+This guide explains how to bring up both backend + database via `docker compose`,
+including:
+- Running the server
+- Importing test data
+- Exporting DB changes back to `db_dump.sql`
+
+---
+
 ## Documentation Overview
 
 Detailed documentation is stored in the [`docs/`](docs/) folder:
 
 | Doc File | Description |
 | -------- | ----------- |
-| [`install.md`](docs/install.md) | Installation instructions for local dev |
-| [`running_backend_locally.md`](docs/running_backend_locally.md) | Running the backend Docker container locally |
-| [`azure_server_guide.md`](docs/azure_server_guide.md) | Azure App Service deployment and server guide |
+| [`install.md`](docs/install.md) | Installation instructions for local development |
+| [`running_server_database_locally.md`](docs/running_server_database_locally.md) | **Primary:** Run backend + local PostgreSQL via `docker compose` (recommended) |
+| [`running_backend_locally.md`](docs/running_backend_locally.md) | Run only the backend Docker container (pull image from Docker Hub) |
+| [`azure_server_guide.md`](docs/azure_server_guide.md) | *Archived:* Azure App Service deployment — **server is no longer live** |
 | [`CI_tests.md`](docs/CI_tests.md) | CI workflow for running backend tests |
 | [`CI_docker_build.md`](docs/CI_docker_build.md) | CI workflow for building and pushing Docker images |
 | [`CI_version_bump.md`](docs/CI_version_bump.md) | CI workflow for automatic version bumping |
@@ -83,12 +98,27 @@ Detailed documentation is stored in the [`docs/`](docs/) folder:
 > Open these files for step-by-step instructions, commands, and best practices.
 
 
+
 ---
 
 ## API Documentation
 
 * **Swagger UI:** [http://localhost:8000/docs](http://localhost:8000/docs)
 * **ReDoc:** [http://localhost:8000/redoc](http://localhost:8000/redoc)
+
+---
+
+## Related Repositories
+
+- [Frontend (School Organization)](https://github.com/Chas-Advance-Grupp-4/frontend)  
+  React application consuming backend APIs for logistics workflow management.
+
+- [IoT Integration (Embedded)](https://github.com/Chas-Advance-Grupp-4/embedded)  
+  Embedded firmware for sensor units providing temperature & environmental telemetry to backend.
+
+- [Project Planning](https://github.com/Chas-Advance-Grupp-4/planning)  
+  Central planning repo containing documentation, requirements, diagrams and project management material.
+
 
 ---
 
@@ -105,9 +135,7 @@ Detailed documentation is stored in the [`docs/`](docs/) folder:
 
 * Expand logging and metrics for better observability.
 * Optimize database queries and connection pooling.
-* Increase unit and integration test coverage.
 * Improve CI/CD with automated rollback for failed deployments.
-* Extend docstrings and Doxygen comments for all services and models.
 * Introduce stricter rate limiting and advanced authentication flows.
 * Introduce environment-specific configs for staging and production.
 * Refactor control unit architecture to support multiple sensor units dynamically instead of hardcoded connections.
